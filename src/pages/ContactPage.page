@@ -1,0 +1,25 @@
+<apex:page standardController="Contact" lightningStylesheets="true" standardStylesheets="true">
+    <!-- Page Header-->
+    <apex:sectionHeader title="Contact Edit" subtitle="New Contact"/>
+
+    <apex:form >
+        <apex:pageBlock title="Rules of SFDX" mode="Edit">
+            <apex:pageBlockSection columns="2" showHeader="true" title="Membership Stattus">
+                <apex:inputField value="{!contact.Status__c}" required="true"/>
+                <apex:inputField value="{!contact.FirstName}" required="true"/>
+                <apex:inputField value="{!contact.LastName}" required="true"/>
+                <apex:inputField value="{!contact.Likes_Ice_Cream__c}" required="true"/>
+                <apex:inputField value="{!contact.Email}" required="true"/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Referrer</apex:outputLabel>
+                    <apex:inputField value="{!contact.Best_Friend__c}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons location="Bottom">
+                <apex:commandButton value="Add Member" action="{!save}" />
+                <apex:commandLink value="Go to Google" target="https://www.google.com"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
