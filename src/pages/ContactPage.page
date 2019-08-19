@@ -1,8 +1,9 @@
+<!-- This page would be used to insert contact in the system-->
 <apex:page standardController="Contact" lightningStylesheets="true" standardStylesheets="true">
     <!-- Page Header-->
     <apex:sectionHeader title="Contact Edit" subtitle="New Contact"/>
 
-    <apex:form >
+    <apex:form>
         <apex:pageBlock title="Rules of SFDX" mode="Edit">
             <apex:pageBlockSection columns="2" showHeader="true" title="Membership Stattus">
                 <apex:inputField value="{!contact.Status__c}" required="true"/>
